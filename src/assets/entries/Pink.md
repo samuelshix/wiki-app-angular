@@ -1,0 +1,2 @@
+# Pink
+Flamingos are pink.

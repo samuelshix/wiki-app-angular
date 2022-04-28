@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    background-color: white;
+}
+
+code {
+    white-space: pre;
+}
+
+h1 {
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+textarea {
+    height: 90vh;
+    width: 80%;
+}
+
+.main {
+    padding: 10px;
+}
+
+.search {
+    width: 100%;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.sidebar {
+    background-color: #f0f0f0;
+    height: 100vh;
+    padding: 20px;
+    margin: 0 !important;
+}
+
+.sidebar h2 {
+    margin-top: 5px;
+}
+.sidebar * {
+    margin: .5em 0;
+    margin-left: 1em;
+}
+
+a {
+    cursor: pointer;
+    color: black !important;
+    text-decoration: none !important;
+}
+  
+a:hover {
+    opacity: 0.8;
+}

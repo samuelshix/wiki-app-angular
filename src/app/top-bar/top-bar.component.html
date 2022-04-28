@@ -1,0 +1,12 @@
+        <a [routerLink]="['/']"><h2>Wiki Angular</h2></a>
+        <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
+        <input matInput type="text" placeholder="Search" [(ngModel)]="searchWord" (keyup.enter)="searchThis()">
+        <div>
+            <a href="{% url 'newPage' %}">Create New Page</a>
+        </div>
+        <div>
+            <a (click)="randomPage()" href="">Random Page</a>
+        </div>
