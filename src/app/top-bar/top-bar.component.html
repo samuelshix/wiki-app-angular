@@ -5,8 +5,8 @@
           </form> -->
         <input type="text" placeholder="Search" [(ngModel)]="searchWord" (keyup.enter)="searchThis()">
         <div>
-            <a href="{% url 'newPage' %}">Create New Page</a>
+            <a class="navButton" href="{% url 'newPage' %}">Create New Page</a>
         </div>
         <div>
-            <a (click)="randomPage()">Random Page</a>
+            <a class="navButton" (click)="randomPage()">Random Page</a>
         </div>
