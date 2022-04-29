@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import PagesJson from '../../../pages.json';
 
@@ -10,7 +11,8 @@ import PagesJson from '../../../pages.json';
 export class PagesComponent implements OnInit {
   pages = PagesJson;
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit(): void {

@@ -7,9 +7,9 @@ import { SearchService } from '../search.service';
   templateUrl: './top-bar.component.html',
   styleUrls: ['./top-bar.component.css']
 })
+
 export class TopBarComponent implements OnInit {
   searchWord: string = "";
-  @Output() searchCriteria = new EventEmitter<String>();
 
   searchThis() {
     this.searchService.addSearchResults(this.searchWord);
@@ -18,8 +18,11 @@ export class TopBarComponent implements OnInit {
   }
 
   randomPage() {
-
+    var randomId = Math.floor((Math.random() * this.searchService.numberOfPages) + 1);
+    this.router.navigateByUrl('/pages/'+randomId);
+    console.log(randomId)
   }
+
   constructor(
     private router: Router,
     private searchService: SearchService
@@ -27,6 +30,7 @@ export class TopBarComponent implements OnInit {
 
   ngOnInit(): void {
     this.searchService.clearSearchResults();
+    this.searchService.noResultsMessage = undefined;
   }
 
 }
